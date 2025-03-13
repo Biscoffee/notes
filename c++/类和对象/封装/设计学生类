@@ -1,0 +1,26 @@
+class student{
+    //属性
+    string m_Name;
+    int m_id;
+    //行为
+    void showStudent()
+    {
+        cout << "name: " << m_Name <<" num :" << m_id <<endl; 
+    }
+    void steID(int id)
+    {
+        m_id = id;
+    }
+    void setName(string name)
+    {
+        m_Name = name;
+    }
+    int main()
+    {
+        student s1;
+        //s1.m_Name = "cbchi";
+        //s1.m_id = 1;
+        
+        s1.showStudent();
+    }
+}

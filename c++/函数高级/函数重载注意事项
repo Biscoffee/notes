@@ -1,0 +1,34 @@
+1.引用作为重载条件
+void fun(int &a)
+{
+    cout << "func(int &a)调用" << endl
+}
+void fun(const int &a)
+{
+    cout << "func(const int &a)调用" << endl
+}
+
+int main()
+{
+    int a = 10;
+    fun(a); //调用无const
+    fun(10); //调用有const
+    return 0;
+}
+
+
+2.函数重载碰到默认参数
+
+void fuc2(int a, int b = 10)
+{
+    cout << "func2(int a, int b = 10)调用" << endl;
+}
+void fuc2(int a)
+{
+    cout << "func2(int a)调用" << endl;
+}
+int main()
+{
+    fuc2(10); //调用有默认参数的，出现二义性，尽量避免
+    return 0;
+}

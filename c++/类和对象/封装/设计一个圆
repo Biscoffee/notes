@@ -1,0 +1,28 @@
+设计一个圆类，求圆的周长
+
+//class代表设计一个类，类后面紧跟着就是名称
+class circle
+{
+    public:
+    //属性
+    //半径
+    int m_r;
+
+    //行为
+    //获取圆的周长
+    double calculateZC()
+    {
+        return 2 * 3.14 * m_r;
+    }
+}
+
+int main()
+{
+    //通过圆类，创建圆的对象
+    circle c1;
+    //通过圆类，实例化出圆的对象
+    cl.m_r = 10;
+    cout << "圆的周长为：" << c1.calculateZC() << endl;
+    //实例化的过程，就是创建对象的过程
+    circle c1;
+}

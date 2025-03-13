@@ -1,0 +1,19 @@
+唯一区别在于默认的访问权限不同
+struct 默认权限是公共
+class  默认权限是私有
+
+clas c1
+{
+    int m_a;
+}
+struct c2
+{
+    int m_a;
+}
+int main(){
+    c1 c;
+    c.m_a = 10; // 错误 访问权限是私有
+    c2 c;
+    c.m_a = 10; // 正确 访问权限是公共
+    return 0;
+}
