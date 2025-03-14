@@ -1,0 +1,40 @@
+  1，使用一个已经创建完毕的对象来初始化新对象
+
+  2，值传递的方式给函数参数传值
+
+  3，值传递返回局部对象
+
+class person{
+public:
+    person()
+    {
+        cout << "person默认构造函数调用" << endl;
+    }
+    person(int age)
+    {
+        m_age = age;
+        cout << "person有参构造函数调用" << endl;
+    }
+    person(const person &p)
+    {
+        m_age = p.m_age;
+        cout << "person拷贝构造函数调用" << endl;
+    }
+}
+  1，使用一个已经创建完毕的对象来初始化新对象
+void test01()
+{
+    person p1(20);
+    person p2(p1);
+    cout << "p2的年龄为：" << p2.m_age << endl;
+}
+  2，值传递的方式给函数参数传值 
+void doWork(person p)
+{
+     
+}
+void test02()
+{
+    person p;
+    doWork(p);
+}
