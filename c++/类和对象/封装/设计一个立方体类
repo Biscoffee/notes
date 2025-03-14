@@ -1,0 +1,17 @@
+class Cube
+{
+public:
+    void setL(int l){
+        m_L = l;
+    }
+    int nalculateS()
+    {
+        return 2*m_L*m_W +.....
+    }
+    
+private:
+
+    int m_L;
+    int m_W;
+    int m_H;
+}

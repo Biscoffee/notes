@@ -1,0 +1,27 @@
+优点1:  将所有成员属性设置为私有，可以使自己控制读写权限
+优点2:  对于写权限，我们可以检测数据有效性
+class Person{
+public:
+    void set_Name(string name){
+        m_Name = name;
+    }
+    string get_Name(){
+        return m_Name;
+    }
+    
+    string m_Name;
+    int m_Age;
+    string m_Idol;
+    int getAge(){
+        return m_Age;
+    }
+}
+int main()
+{
+    Person P;
+    P.m_Name = "张三"; // 正确
+    P.set_Name("李四"); // 正确
+    cout << P.m_Name << endl; // 张三
+
+    P.m_Age = 100; // 错误 年龄不能为100岁
+}
