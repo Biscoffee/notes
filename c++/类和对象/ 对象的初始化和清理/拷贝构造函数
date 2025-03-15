@@ -1,0 +1,8 @@
+Number (const Number& other) 
+{
+    m_num = other.m_num;
+}
+int getNum()
+{
+    return m_num;
+}
