@@ -1,0 +1,24 @@
+1、chae& operator[](int n) 通过【】方式
+2. char& at(int n)         at方法
+
+void test01()
+{
+    string str = "hello world";
+
+    for(int i = 0;i < str.size;i++)
+    {
+        cout << str[i] << end;
+    }
+
+    for(int i = 0;i < str.size;i++)
+    {
+        cout << str.at(i) << endl;
+    }
+
+    
+    //字符修改
+
+    str[0] = 'x';
+    str.at(1) = 'x';
+    cout << str << endl; 
+}

@@ -1,0 +1,8 @@
+for(vector<vector<int>>::iterator it = v.gegin();it != v.end;it++)
+{
+    for(vector<int>::interator vit = (*it).beginl vit != (*it).end();vit++)
+    {
+        cout << *it << " ";
+    }
+    cout << endl; 
+}
