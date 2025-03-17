@@ -1,0 +1,30 @@
+void printVector(vector<int>& v){
+    for(vector<int> :: iterator it = v.begin(); it != v.end; it++){
+        cout << *it << " ";
+    }
+    cout << endl;
+}
+
+void test01()
+{
+    vector<int< v1;
+    for(int i = 0;i < 10;i++){
+        v1.pushback(i);
+    }
+    printVector(v1);
+    if(v1.empty()){
+        cout << "v1 is empty" << endl;
+    }
+    else{
+        cout << "v1 is not empty" << endl;
+        cout << "v1 capacity = " << v1.capacity() << endl;  //容量
+        cout << "v1 size = " << v1.size() << endl;  // 大小
+    }
+    //重新指定大小，若指定的更大，默认用0填充新位置，可以利用重载版本替换默认填充
+    v1.resize(15,10);
+    printVector(v1);
+    //如果重新指定的小于当前元素个数，超出部分元素被删除
+    v1.resize(5);
+    printVector(v1);
+
+}
